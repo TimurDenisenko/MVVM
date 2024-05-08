@@ -75,9 +75,8 @@ public partial class DBListPage : ContentPage
     {
         friendsList.ItemTemplate = new DataTemplate(() =>
         {
-            Friend friend = (Friend)BindingContext;
             Image image = new Image();
-            image.Source = ImageSource.FromStream(()=>new MemoryStream(friend.Img));
+            image.SetBinding(Image.SourceProperty, "Img", converter: new ByteArrayToImageSourceConverter());
             return new ViewCell { View = new HorizontalStackLayout { Children = { image } } };
         });
     }

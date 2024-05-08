@@ -14,7 +14,7 @@
         <Entry Text="{Binding Age}" Keyboard="Numeric"/>
         <Label Text="Pilt"/>
         <Image x:Name="pilt" HeightRequest="100"/>
-        <Button Text="Vali pilt" Clicked="Button_Clicked"/>
+        <Button Text="Vali pilt" Clicked="Button_Clicked" TextColor="White"/>
         <HorizontalStackLayout>
             <Button Text="Salvesta" Clicked="SaveFriend" WidthRequest="130" TextColor="White"/>
             <Button Text="Kustuta" Clicked="DeleteFriend" WidthRequest="130" TextColor="White"/>
